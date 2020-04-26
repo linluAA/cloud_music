@@ -14,7 +14,11 @@ import 'vant/lib/index.css';
 import FastClick from 'fastclick' //解决移动端500毫秒延迟
 FastClick.attach(document.body)
 
-Vue.use(Vant);
+import myPlugins from "@/plugins/index.js"//自定义插件（全局组件）
+
+Vue
+    .use(Vant)
+    .use(myPlugins);
 
 Vue.config.productionTip = false
 
