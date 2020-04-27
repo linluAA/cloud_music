@@ -25,3 +25,7 @@
 .music-header .van-nav-bar__title {
   color: #ffffff;
 }
+
+.music-header .van-hairline--top-bottom::after, .music-header .van-hairline-unset--top-bottom::after {
+  border-width: 0;
+}
