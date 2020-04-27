@@ -1,8 +1,8 @@
 <template>
   <div>
  <h1>推荐歌曲</h1>
-    <van-grid :border="false" :column-num="2" class="list">
-      <van-grid-item v-for="item in song" :key="item.id">
+    <van-grid :border="false" :column-num="2" class="list" >
+      <van-grid-item v-for="item in song" :key="item.id" :gutter="30">
         <router-link :to="{path:'/details',query:{id:item.id}}">
           <van-image :src="item.picUrl" />
           <p>{{item.name}}</p>

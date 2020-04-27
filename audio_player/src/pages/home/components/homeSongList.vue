@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="songlist">
       <h1>推荐歌单</h1>
     <van-grid :border="false" :column-num="2" class="list">
       <van-grid-item v-for="item in songlist" :key="item.id">

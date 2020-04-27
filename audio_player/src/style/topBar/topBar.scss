@@ -10,19 +10,15 @@
         font-size: 17px;
         border-bottom: .1px solid #eee;
     }
-    .music-o{
-        position: absolute;
-        top: 4vw;
-        left: 20px;
-    }
-    .search{
-        position: absolute;
-        top: 4vw;
-        right: 20px;
-    }
     .title-nav{
         color: #fff;
         border-bottom: none ;
+      }
+      .van-nav-bar{
+        background-color: #d44439;
+      }
+      .van-nav-bar__title{
+        color: #ffffff;
       }
   }
   

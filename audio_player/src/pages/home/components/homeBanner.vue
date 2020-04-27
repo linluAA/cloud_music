@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <van-swipe :autoplay="3000">
+  <div class="swipebox">
+    <van-swipe :autoplay="3000" class="swipe">
       <van-swipe-item v-for="(item) in listBanner" :key="item.targetId">
           <router-link :to="{path:'/details',query:{id:item.targetId}}">
         <van-image class="img" :src="item.picUrl" />
@@ -27,5 +27,6 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "@/style/home/homeBanner";
 </style>
