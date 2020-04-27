@@ -1,6 +1,6 @@
 <template>
   <div class="songlist">
-      <h1>推荐歌单</h1>
+      <p>推荐歌单</p>
     <van-grid :border="false" :column-num="2" class="list">
       <van-grid-item v-for="item in songlist" :key="item.id">
         <router-link :to="{path:'/details',query:{id:item.id}}">

@@ -1,4 +1,4 @@
-.songlist h1 {
+.songlist p {
   margin-top: 5vw;
   padding: 2vw 3vw 0 3vw;
 }
@@ -11,4 +11,8 @@
 .songlist .list .van-grid-item__content p {
   width: 100%;
   height: 10vw;
+}
+
+.songlist .music-header .title-nav {
+  color: #000000;
 }

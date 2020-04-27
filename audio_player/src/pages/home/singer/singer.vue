@@ -1,7 +1,6 @@
 <template>
   <div>
-      <!-- 全局组件 -->
-    <top-bar></top-bar>
+      歌手
   </div>
 </template>
 

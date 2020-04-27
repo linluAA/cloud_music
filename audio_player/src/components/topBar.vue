@@ -13,15 +13,29 @@
     <!-- 分栏 -->
     <van-tabs
       class="title-nav"
-      v-model="active"
+      v-model="activeName"
       background="#d44439"
       title-inactive-color="#eee"
       title-active-color="#fff"
       color="#fff"
     >
-      <van-tab title="推荐"></van-tab>
-      <van-tab title="歌手"></van-tab>
-      <van-tab title="排行"></van-tab>
+   
+        <van-tab title="推荐" to="/recommend" name="recommend">
+          <router-view></router-view>
+        </van-tab>
+    
+
+     
+        <van-tab title="歌手" to="/singer" name="singer">
+            <router-view></router-view>
+        </van-tab>
+     
+
+     
+        <van-tab title="排行" to="/ranking" name="ranking">
+            <router-view></router-view>
+        </van-tab>
+     
     </van-tabs>
   </div>
 </template>
@@ -31,9 +45,12 @@ export default {
   name: "MusicHeader",
   data() {
     return {
-      active: 2
+      activeName: this.$route.name
     };
   }
+  // created(){
+  //   console.log(this.$route.path)
+  // }
 };
 </script>
 
