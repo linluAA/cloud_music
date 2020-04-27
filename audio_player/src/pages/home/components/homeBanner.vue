@@ -1,0 +1,31 @@
+<template>
+  <div>
+    <van-swipe :autoplay="3000">
+      <van-swipe-item v-for="(item) in listBanner" :key="item.targetId">
+          <router-link :to="{path:'/details',query:{id:item.targetId}}">
+        <van-image class="img" :src="item.picUrl" />
+          </router-link>
+      </van-swipe-item>
+    </van-swipe>
+  </div>
+</template>
+
+<script>
+import * as api from "@/request/api/home.js";
+export default {
+  data() {
+    return {
+      listBanner: []
+    };
+  },
+  async created() {
+    let banner = await api.getIndexInfo();
+    if (banner.data.code === 200) {
+      this.listBanner = banner.data.banners;
+    }
+  }
+};
+</script>
+
+<style>
+</style>

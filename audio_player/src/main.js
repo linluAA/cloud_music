@@ -11,10 +11,13 @@ import '@/style/reset.css'
 import Vant from 'vant'; //vant-ui
 import 'vant/lib/index.css';
 
+import { Lazyload } from 'vant'; //懒加载
+
 import FastClick from 'fastclick' //解决移动端500毫秒延迟
 FastClick.attach(document.body)
 
-Vue.use(Vant);
+Vue.use(Vant)
+  .use(Lazyload)
 
 Vue.config.productionTip = false
 
