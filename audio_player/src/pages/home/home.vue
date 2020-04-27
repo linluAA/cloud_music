@@ -1,11 +1,15 @@
 <template>
   <div>
-    
+    <!-- 全局组件 -->
+    <top-bar></top-bar>
   </div>
 </template>
 
 <script>
-export default {};
+
+export default {
+  
+};
 </script>
 
 <style>
