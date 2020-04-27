@@ -20,6 +20,7 @@ import myPlugins from "@/plugins/index.js"//自定义插件（全局组件）
 
 import { Tab, Tabs } from 'vant';
 import { Divider } from 'vant';
+import { Image as VanImage } from 'vant';
 
 Vue
     .use(Vant)
@@ -27,7 +28,8 @@ Vue
     .use(Tab)
     .use(Tabs)
     .use(Lazyload)
-    .use(Divider);
+    .use(Divider)
+    .use(VanImage);
 
 Vue.config.productionTip = false
 
