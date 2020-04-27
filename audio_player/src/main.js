@@ -16,9 +16,13 @@ FastClick.attach(document.body)
 
 import myPlugins from "@/plugins/index.js"//自定义插件（全局组件）
 
+import { Tab, Tabs } from 'vant';
+
 Vue
     .use(Vant)
-    .use(myPlugins);
+    .use(myPlugins)
+    .use(Tab)
+    .use(Tabs);
 
 Vue.config.productionTip = false
 

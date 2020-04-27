@@ -1,7 +1,7 @@
-import { ajaxPost } from "@/utils/request.js"
+import { ajaxGet } from "@/utils/request.js"
 
-//获取详情页接口
-export function getDetailGoodsInfo(data,config) {
-    let url = "/details"
-    return ajaxPost(url,data,config)
+//获取歌手详情接口
+export function getArtists(config) {
+    let url = "/artists"
+    return ajaxGet(url,config)
 }
