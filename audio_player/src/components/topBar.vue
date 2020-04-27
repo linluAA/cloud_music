@@ -18,8 +18,6 @@
       title-inactive-color="#eee"
       title-active-color="#fff"
       color="#fff"
-      type="line"
-      border="false"
     >
       <van-tab title="推荐"></van-tab>
       <van-tab title="歌手"></van-tab>
