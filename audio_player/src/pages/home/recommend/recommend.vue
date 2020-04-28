@@ -2,11 +2,17 @@
   <div>
   
     <!-- 轮播图 -->
+ 
     <recommend-banner></recommend-banner>
+
     <!-- 推荐歌单 -->
+    
     <recommend-song-list></recommend-song-list>
+    
     <!-- 推荐歌曲 -->
+   
     <recommend-song></recommend-song>
+    
   </div>
 </template>
 
