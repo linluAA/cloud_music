@@ -38,6 +38,8 @@ export default {
         });
         this.list.push(res);
       });
+
+      console.log(this.list)
     }
   }
 
