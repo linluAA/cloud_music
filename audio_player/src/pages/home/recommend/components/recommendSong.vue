@@ -5,6 +5,7 @@
       <van-grid-item v-for="item in song" :key="item.id" :gutter="30">
         <router-link :to="{path:'/details',query:{id:item.id}}">
           <van-image :src="item.picUrl" />
+          <div></div>
           <p>{{item.name}}</p>
         </router-link>
       </van-grid-item>
@@ -24,7 +25,7 @@ export default {
     let list = await api.newsong();
     if (list.data.code === 200) {
       this.song = list.data.result;
-      console.log(this.song);
+      // console.log(this.song);
     }
   }
 };

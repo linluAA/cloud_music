@@ -40,6 +40,9 @@ let routes = [
         path: "/details",
         name: "details",
         component: details,
+        props:function(route){
+            return{id:route.query.id}
+        },
         meta: {
             keepAlive: true //需要被缓存的组件
         }
