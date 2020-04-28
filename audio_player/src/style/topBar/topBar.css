@@ -10,7 +10,7 @@
 
 .music-header .title {
   font-size: 17px;
-  border-bottom: .1px solid #eee;
+  border-bottom: 0.1px solid #eee;
 }
 
 .music-header .van-nav-bar {
@@ -21,6 +21,25 @@
   color: #ffffff;
 }
 
-.music-header .van-hairline--top-bottom::after, .music-header .van-hairline-unset--top-bottom::after {
+.music-header .van-hairline--top-bottom::after,
+.music-header .van-hairline-unset--top-bottom::after {
   border-width: 0;
+}
+
+.music-header .box {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  height: 6%;
+}
+
+.music-header .box1 {
+  width: 100%;
+  position: fixed;
+  top: 6%;
+  z-index: 5;
+}
+
+.music-header .ysbox {
+  height: 100%;
 }

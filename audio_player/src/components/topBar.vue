@@ -1,7 +1,7 @@
 <template>
   <!-- 头部 -->
   <div class="music-header">
-    <van-nav-bar title="Cloud Music">
+    <van-nav-bar title="Cloud Music" class="box">
       <template #left>
         <van-icon class="music-o" name="music-o" color="#fff" size="25" />
       </template>
@@ -12,31 +12,21 @@
 
     <!-- 分栏 -->
     <van-tabs
-      class="title-nav"
+      class="title-nav box1"
       v-model="activeName"
       background="#d44439"
       title-inactive-color="#eee"
       title-active-color="#fff"
       color="#fff"
     >
-   
-        <van-tab title="推荐" to="/recommend" name="recommend">
-          <router-view></router-view>
-        </van-tab>
-    
+      <van-tab title="推荐" to="/recommend" name="recommend"></van-tab>
 
-     
-        <van-tab title="歌手" to="/singer" name="singer">
-            <router-view></router-view>
-        </van-tab>
-     
+      <van-tab title="歌手" to="/singer" name="singer"></van-tab>
 
-     
-        <van-tab title="排行" to="/ranking" name="ranking">
-            <router-view></router-view>
-        </van-tab>
-     
+      <van-tab title="排行" to="/ranking" name="ranking"></van-tab>
     </van-tabs>
+    <div class="ysbox"></div>
+    <router-view></router-view>
   </div>
 </template>
 
