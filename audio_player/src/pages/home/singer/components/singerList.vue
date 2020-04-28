@@ -1,15 +1,15 @@
 <template>
   <div>
-    <van-index-bar :index-list="indexList" sticky="flase">
+    <van-index-bar :index-list="indexList" :sticky="bool">
       <van-index-anchor :index="item" v-for="(item,id) in indexList" :key="id">
         {{item}}
-        <div v-for="(items,idx) in singer" :key="idx">
-          <van-card v-if="items.hotid === item ||items.singerid === item" lazy-load>
+        <div v-for="(items,idx) in singer" :key="idx" >
+          <van-card v-if="items.hotid === item ||items.singerid === item" lazy-load class="singerdiv">
             <template #thumb>
               <van-image width="100%" height="100%" fit="contain" :src="items.picUrl" />
             </template>
-            <template #title>
-              <van-tag plain type="danger">{{items.name}}</van-tag>
+            <template #desc>
+              <p>{{items.name}}</p>
             </template>
           </van-card>
         </div>
@@ -53,7 +53,7 @@ export default {
         "Y",
         "Z"
       ],
-      sticky:false
+      bool:false
     };
   },
   async created() {
@@ -82,4 +82,13 @@ export default {
 </script>
 
 <style>
+.singerdiv{
+  border-bottom: 1px solid #d3d1d1;
+}
+.singerdiv p{
+  text-align: center;
+  line-height: 22vw;
+  font-size: 20px;
+  /* vertical-align: text-top; */
+}
 </style>

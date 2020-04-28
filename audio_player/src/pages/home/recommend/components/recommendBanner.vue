@@ -1,7 +1,7 @@
 <template>
   <div class="swipebox">
     <van-swipe :autoplay="3000" class="swipe">
-      <van-swipe-item v-for="(item) in listBanner" :key="item.targetId">
+      <van-swipe-item v-for="(item,idx) in listBanner" :key="idx">
           <router-link :to="{path:'/details',query:{id:item.targetId}}">
         <van-image class="img" :src="item.picUrl" />
           </router-link>
