@@ -40,32 +40,31 @@
 </template>
 
 <script>
-import * as api from "@/request/api/details.js";
+import * as api from "@/request/api/ranking.js";
 export default {
-  props: ["id"],
+  props: ["idx"],
   data() {
     return {
-      dataInfo: "",
-      list: []
+      dataInfo: ""
     };
   },
   async activated() {
-    this.detail();
+    this.getRankIng();
   },
   methods: {
     goBack() {
       (this.dataInfo = ""), this.$router.go(-1);
     },
 
-    async detail() {
-      let res = await api.detail({
+    async getRankIng() {
+      let res = await api.getRankIng({
         params: {
-          id: this.id
+          idx: this.idx
         }
       });
       if (res.data.code === 200) {
-        this.dataInfo = res.data.result;
-        // console.log(res)
+        this.dataInfo = res.data;
+        // console.log(this.dataInfo)
       }
     }
   }

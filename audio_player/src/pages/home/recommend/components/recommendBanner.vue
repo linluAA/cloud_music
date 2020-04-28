@@ -3,7 +3,7 @@
     <van-swipe :autoplay="3000" class="swipe">
       <van-swipe-item v-for="(item,idx) in listBanner" :key="idx">
           <router-link :to="{path:'/details',query:{id:item.targetId}}">
-        <van-image class="img" :src="item.picUrl" />
+        <van-image class="img" :src="item.picUrl" lazy-load/>
           </router-link>
       </van-swipe-item>
     </van-swipe>

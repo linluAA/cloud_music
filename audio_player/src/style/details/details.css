@@ -6,6 +6,7 @@
 
 .details-top .van-image {
   width: 100%;
+  height: 100vw;
   opacity: .7;
 }
 
@@ -75,7 +76,7 @@
 
 .details-bottom .btm-title .sum {
   font-size: 3vw;
-  color: #eee;
+  color: black;
 }
 
 .details-bottom .btm-content {

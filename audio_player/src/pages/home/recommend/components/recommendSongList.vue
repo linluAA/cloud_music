@@ -1,12 +1,18 @@
 <template>
   <div class="songlist">
-    <van-divider>推荐歌单</van-divider>
-    <van-grid :border="false" :column-num="2" class="list">
+    <h2>推荐歌单</h2>
+    <van-grid :border="false" :column-num="3" class="list">
       <van-grid-item v-for="item in songlist" :key="item.id">
-        <router-link :to="{path:'/details',query:{id:item.id}}">
-          <van-image :src="item.picUrl" />
-          <p>{{item.name}}</p>
-        </router-link>
+        <div class="img-list">
+          <router-link :to="{path:'/details',query:{id:item.id}}">
+            <van-image :src="item.picUrl" lazy-load>
+              <template v-slot:loading>
+                <van-loading type="spinner" size="20" />
+              </template>
+            </van-image>
+            <span>{{item.name}}</span>
+          </router-link>
+        </div>
       </van-grid-item>
     </van-grid>
   </div>
