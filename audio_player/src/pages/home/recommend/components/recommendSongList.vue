@@ -1,6 +1,6 @@
 <template>
   <div class="songlist">
-      <p>推荐歌单</p>
+    <van-divider>推荐歌单</van-divider>
     <van-grid :border="false" :column-num="2" class="list">
       <van-grid-item v-for="item in songlist" :key="item.id">
         <router-link :to="{path:'/details',query:{id:item.id}}">
@@ -24,7 +24,7 @@ export default {
     let list = await api.personalized();
     if (list.data.code === 200) {
       this.songlist = list.data.result;
-    //   console.log(this.songlist);
+      // console.log(this.songlist);
     }
   }
 };

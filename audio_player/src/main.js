@@ -18,9 +18,10 @@ FastClick.attach(document.body)
 
 import myPlugins from "@/plugins/index.js"//自定义插件（全局组件）
 
-import { Tab, Tabs } from 'vant';
-import { Divider } from 'vant';
-import { Image as VanImage } from 'vant';
+import { Tab, Tabs } from 'vant';//标签页
+import { Divider } from 'vant'; //分割线
+import { Image as VanImage } from 'vant';//图片
+import { IndexBar, IndexAnchor } from 'vant';//IndexBar 索引栏
 
 Vue
     .use(Vant)
@@ -29,7 +30,9 @@ Vue
     .use(Tabs)
     .use(Lazyload)
     .use(Divider)
-    .use(VanImage);
+    .use(VanImage)
+    .use(IndexBar)
+    .use(IndexAnchor);
 
 Vue.config.productionTip = false
 

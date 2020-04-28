@@ -5,7 +5,7 @@ import home from "@/pages/home/home"//首页
 import details from "@/pages/details/details"//详情页
 import recommend from "@/pages/home/recommend/recommend" //排行榜
 import ranking from "@/pages/home/ranking/ranking" //排行榜
-import singer from "@/pages/home/singer/singer" //排行榜
+import singer from "@/pages/home/singer/singer" //歌手
 Vue.use(VueRouter)
 
 let routes = [
@@ -20,6 +20,7 @@ let routes = [
         children: [
             {
                 path: '/recommend',
+                alias: "/",
                 name: "recommend",
                 component: recommend
             },

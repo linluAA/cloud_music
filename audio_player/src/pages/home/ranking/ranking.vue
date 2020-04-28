@@ -2,7 +2,6 @@
   <div>
     <!-- 排行榜 -->
     <ranking-box></ranking-box>
-    排行
   </div>
 </template>
 
