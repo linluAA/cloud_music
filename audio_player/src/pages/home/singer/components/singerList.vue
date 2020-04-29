@@ -40,13 +40,10 @@ export default {
         "L",
         "M",
         "N",
-        "O",
-        "P",
         "Q",
         "R",
         "S",
         "T",
-        "U",
         "V",
         "W",
         "X",
@@ -60,24 +57,9 @@ export default {
     let list = await api.artists();
     if (list.data.code === 200) {
       this.singer = list.data.artists;
-      //   console.log(this.singer);
     }
-    // this.getSinger();
   }
-  //   methods: {
-  //     async getSinger() {
-  //       let arr = [];
-  //       this.indexList.forEach(item => {
-  //         this.singer.forEach(async items => {
-  //           if (items.singerid === item) {
-  //             arr = await arr.push(items);
-  //           }
-  //         });
-  //       });
-  //       this.singer = arr;
-  //       console.log(this.singer);
-  //     }
-  //   }
+
 };
 </script>
 

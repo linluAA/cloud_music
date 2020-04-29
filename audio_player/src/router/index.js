@@ -6,6 +6,7 @@ import details from "@/pages/details/details"//详情页
 import recommend from "@/pages/home/recommend/recommend" //排行榜
 import ranking from "@/pages/home/ranking/ranking" //排行榜
 import singer from "@/pages/home/singer/singer" //歌手
+import music from "@/pages/home/music/music" //歌曲播放器
 Vue.use(VueRouter)
 
 let routes = [
@@ -33,6 +34,11 @@ let routes = [
                 path: '/singer',
                 name: 'singer',
                 component: singer
+            },
+            {
+                path: '/music',
+                name: 'music',
+                component: music
             }
 
         ]
@@ -45,7 +51,6 @@ let routes = [
             keepAlive: true //需要被缓存的组件
         }
     },
-
     {
         path: "*",
         name: "notFout",

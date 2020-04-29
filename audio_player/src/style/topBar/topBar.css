@@ -31,6 +31,7 @@
   position: fixed;
   top: 0;
   height: 6%;
+  z-index: 5;
 }
 
 .music-header .box1 {

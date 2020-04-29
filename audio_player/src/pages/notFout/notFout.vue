@@ -1,6 +1,6 @@
 <template>
   <div>
-      404
+     <van-empty image="error" description="请输入正确的地址" />
   </div>
 </template>
 

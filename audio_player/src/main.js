@@ -22,6 +22,9 @@ import { Tab, Tabs } from 'vant';//标签页
 import { Divider } from 'vant'; //分割线
 import { Image as VanImage } from 'vant';//图片
 import { IndexBar, IndexAnchor } from 'vant';//IndexBar 索引栏
+import { Empty } from 'vant';//错误信息
+
+
 
 Vue
     .use(Vant)
@@ -32,7 +35,8 @@ Vue
     .use(Divider)
     .use(VanImage)
     .use(IndexBar)
-    .use(IndexAnchor);
+    .use(IndexAnchor)
+    .use(Empty);
 
 Vue.config.productionTip = false
 

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <template v-if="list" class="rankingbox">
+  <div class="rankingbox">
+    <template v-if="list">
     <van-card v-for="(item,idx) in list" :key="idx" lazy-load>
       <template #thumb>
         <van-image width="100%" height="100%"  :src="item.data.playlist.coverImgUrl" />
