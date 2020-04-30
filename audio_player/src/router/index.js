@@ -8,6 +8,9 @@ import detailsThree from "@/pages/details/detailsThree"//排行详情页
 import recommend from "@/pages/home/recommend/recommend" //排行榜
 import ranking from "@/pages/home/ranking/ranking" //排行榜
 import singer from "@/pages/home/singer/singer" //歌手
+import collection from "@/pages/collection/collection" //收藏
+import search from "@/pages/search/search" //搜索
+
 Vue.use(VueRouter)
 
 let routes = [
@@ -65,6 +68,28 @@ let routes = [
         path: "/detailsThree",
         name: "detailsThree",
         component: detailsThree,
+        props: function (route) {
+            return { idx: route.query.idx }
+        },
+        meta: {
+            keepAlive: true //需要被缓存的组件
+        }
+    },
+    {
+        path: "/collection",
+        name: "collection",
+        component: collection,
+        props: function (route) {
+            return { idx: route.query.idx }
+        },
+        meta: {
+            keepAlive: true //需要被缓存的组件
+        }
+    },
+    {
+        path: "/search",
+        name: "search",
+        component: search,
         props: function (route) {
             return { idx: route.query.idx }
         },

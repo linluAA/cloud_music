@@ -1,0 +1,37 @@
+.search .top {
+  display: flex;
+  height: 12vw;
+  background-color: #d44439;
+}
+
+.search .top .arrow-left {
+  position: absolute;
+  top: 1vw;
+  padding: 2.5vw 0 0 3vw;
+  z-index: 222;
+}
+
+.search .top .input {
+  width: 70vw;
+  height: 7vw;
+  margin-top: 2vw;
+  margin-left: 15vw;
+  border: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  background-color: #d44439;
+}
+
+.search .top input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s;
+}
+
+.slide-enter,
+.slide-leave-to {
+  transform: translate3d(100%, 0, 0);
+}
