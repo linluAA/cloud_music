@@ -2,12 +2,15 @@
 .bg {
   width: 100%;
   height: 100%;
-  background: #000;
+  background: #000 repeat;
   opacity: 0.5;
   color: #fff;
+  position: relative;
+  // 头部歌名部分
   .musicTop {
     position: relative;
-    padding: 2vw 3vw;
+    padding: 2vw;
+
     p {
       height: 5vw;
       font-size: 4vw;
@@ -18,6 +21,49 @@
     span {
       float: left;
       padding: 2vw 3vw;
+    }
+  }
+
+  // 图片旋转部分
+  .musicImg {
+    .imgbox {
+      position: absolute;
+      top: 35vw;
+      left: 15%;
+      border-radius: 50%;
+      border: 15px solid hsla(0, 0%, 100%, 0.1);
+      animation: mymove 9s infinite linear;
+      animation-play-state: running;
+    }
+  }
+  // 动画
+  @keyframes mymove {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .musicFoot {
+   position: absolute;
+   bottom: 30vw;
+   .jindu{
+    margin-left: 20vw;
+    margin-bottom: 10vw;
+   }
+    .musicUl {
+      width: 100%;
+      li {
+        width: 5vw;
+        height: 5vw;
+        float: left;
+        margin-left: 11vw;
+        span{
+          font-size: 50px;
+        }
+      }
     }
   }
 }

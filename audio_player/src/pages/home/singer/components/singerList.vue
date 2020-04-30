@@ -3,15 +3,25 @@
     <van-index-bar :index-list="indexList" :sticky="bool">
       <van-index-anchor :index="item" v-for="(item,id) in indexList" :key="id">
         {{item}}
-        <div v-for="(items,idx) in singer" :key="idx" >
-          <van-card v-if="items.hotid === item ||items.singerid === item" lazy-load class="singerdiv">
-            <template #thumb>
-              <van-image width="100%" height="100%" fit="contain" :src="items.picUrl" />
-            </template>
-            <template #desc>
-              <p>{{items.name}}</p>
-            </template>
-          </van-card>
+        <div v-for="(items,id) in singer" :key="id">
+          <router-link :to="{path:'/detailsTwo',query:{id:items.id}}">
+            <van-card
+              v-if="items.hotid === item ||items.singerid === item"
+              lazy-load
+              class="singerdiv"
+            >
+              <template #thumb>
+                <van-image width="100%" height="100%" fit="contain" :src="items.picUrl" lazy-load>
+                  <template v-slot:loading>
+                    <van-loading type="spinner" size="20" />
+                  </template>
+                </van-image>
+              </template>
+              <template #desc>
+                <p>{{items.name}}</p>
+              </template>
+            </van-card>
+          </router-link>
         </div>
       </van-index-anchor>
     </van-index-bar>
@@ -50,7 +60,7 @@ export default {
         "Y",
         "Z"
       ],
-      bool:false
+      bool: false
     };
   },
   async created() {
@@ -59,18 +69,16 @@ export default {
       this.singer = list.data.artists;
     }
   }
-
 };
 </script>
 
 <style>
-.singerdiv{
+.singerdiv {
   border-bottom: 1px solid #d3d1d1;
 }
-.singerdiv p{
+.singerdiv p {
   text-align: center;
   line-height: 22vw;
   font-size: 20px;
-  /* vertical-align: text-top; */
 }
 </style>

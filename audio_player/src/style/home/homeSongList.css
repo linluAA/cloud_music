@@ -1,18 +1,28 @@
-.songlist h1 {
+.songlist h2 {
+  display: flex;
+  justify-content: center;
   margin-top: 5vw;
-  padding: 2vw 3vw 0 3vw;
+  font-size: 4vw;
+  color: #333;
 }
 
-.songlist .list .van-grid-item__content img {
+.songlist .van-grid .van-grid-item {
   width: 100%;
-  height: 100%;
+  height: 70vw;
 }
 
-.songlist .list .van-grid-item__content p {
+.songlist .van-grid .van-grid-item .img-list {
   width: 100%;
-  height: 10vw;
+  display: flex;
+  height: 50vw;
 }
 
-.songlist .music-header .title-nav {
-  color: #000000;
+.songlist .van-grid .van-grid-item .img-list .van-image {
+  width: 100%;
+  height: 30vw;
+}
+
+.songlist .van-grid .van-grid-item .img-list span {
+  font-size: 3vw;
+  color: black;
 }

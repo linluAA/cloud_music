@@ -1,16 +1,22 @@
 <template>
-  <div class="rankingbox">
-    <template v-if="list">
-    <van-card v-for="(item,idx) in list" :key="idx" lazy-load>
-      <template #thumb>
-        <van-image width="100%" height="100%"  :src="item.data.playlist.coverImgUrl" />
-      </template>
-      <template #title>
-        <li>1.{{item.data.playlist.tracks[0].name}}</li>
-        <li>2.{{item.data.playlist.tracks[1].name}}</li>
-        <li>3.{{item.data.playlist.tracks[3].name}}</li>
-      </template>
-    </van-card>
+  <div>
+    <template v-if="list" class="rankingbox">
+      <van-card v-for="(item,idx) in list" :key="idx" lazy-load >
+        <!-- <router-link :to="{path:'/detailsThree',query:{idx:item.idx}}"> -->
+          <template #thumb>
+            <van-image width="100%" height="100%" :src="item.data.playlist.coverImgUrl" lazy-load >
+              <template v-slot:loading>
+                <van-loading type="spinner" size="20" />
+              </template>
+            </van-image>
+          </template>
+          <template #title>
+            <li>1.{{item.data.playlist.tracks[0].name}}</li>
+            <li>2.{{item.data.playlist.tracks[1].name}}</li>
+            <li>3.{{item.data.playlist.tracks[3].name}}</li>
+          </template>
+        <!-- </router-link> -->
+      </van-card>
     </template>
   </div>
 </template>
@@ -38,12 +44,11 @@ export default {
         });
         this.list.push(res);
       });
-
-      console.log(this.list)
-    }
+    },
+    // toDetails(idx) {
+    //   this.$router.push({ path: "/detailsThree", query: { idx: idx } });
+    // }
   }
-
- 
 };
 </script>
 
