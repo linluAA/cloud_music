@@ -7,10 +7,12 @@
           <van-loading type="spinner" size="80" />
         </template>
       </van-image>
-      <div class="top-btn">
-        <van-icon class="arrow-left" name="arrow-left" @click="goBack" color="#fff" size="8vw" />
-        <p>歌单</p>
-      </div>
+      <van-sticky :offset-top="0">
+        <div class="top-btn">
+          <van-icon class="arrow-left" name="arrow-left" @click="goBack" color="#fff" size="6vw" />
+          <p>歌单</p>
+        </div>
+      </van-sticky>
       <div class="top-text">
         <h2>{{dataInfo.name}}</h2>
         <div class="ting">
@@ -45,16 +47,15 @@ export default {
   props: ["id"],
   data() {
     return {
-      dataInfo: "",
-      list: []
+      dataInfo: ""
     };
   },
-  async activated() {
+   async activated() {
     this.detail();
   },
   methods: {
     goBack() {
-      (this.dataInfo = ""), this.$router.go(-1);
+      this.$router.go(-1);
     },
 
     async detail() {

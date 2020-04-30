@@ -28,16 +28,27 @@
 
 .music-header .box {
   width: 100%;
+  display: flex;
   position: fixed;
   top: 0;
-  height: 6%;
+  height: 13vw;
+}
+
+.music-header .box .mine {
+  margin-top: 4vw;
 }
 
 .music-header .box1 {
   width: 100%;
   position: fixed;
-  top: 6%;
+  top: 13vw;
   z-index: 5;
+  border-top: 1px solid #fff;
+}
+
+.music-header .box1 .van-tabs__line {
+  position: absolute;
+  top: 9vw;
 }
 
 .music-header .ysbox {
