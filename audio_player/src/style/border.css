@@ -33,6 +33,9 @@
     overflow: hidden;
     position: absolute;
 }
+body{
+    background-color: #eee;
+}
 /* border
  * 因，边框是由伪元素区域遮盖在父级
  * 故，子级若有交互，需要对子级设置

@@ -4,13 +4,13 @@
     <van-nav-bar title="Cloud Music" class="box" tag="div">
       <template #left>
         <router-link to="/collection" class="mine">
-          <van-icon class="music-o" name="music-o" color="#fff" size="25" />
+          <van-icon class="music-o" name="music-o" color="#fff" size="6vw" />
         </router-link>
       </template>
 
       <template #right>
         <router-link to="/search" class="mine" tag="div">
-          <van-icon class="search" name="search" color="#fff" size="25" />
+          <van-icon class="search" name="search" color="#fff" size="6vw" />
         </router-link>
       </template>
     </van-nav-bar>
@@ -54,6 +54,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 @import "@/style/topBar/topBar";
 </style>

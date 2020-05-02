@@ -50,7 +50,7 @@ export default {
       dataInfo: ""
     };
   },
-   async activated() {
+  async activated() {
     this.detail();
   },
   methods: {

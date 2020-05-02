@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="singer">
     <van-index-bar :index-list="indexList" :sticky="bool">
-      <van-index-anchor :index="item" v-for="(item,id) in indexList" :key="id">
+      <van-index-anchor :index="item" v-for="(item,id) in indexList" :key="id" style="padding:none;">
         {{item}}
         <div v-for="(items,id) in singer" :key="id">
           <router-link :to="{path:'/detailsTwo',query:{id:items.id}}">
@@ -75,13 +75,6 @@ export default {
 };
 </script>
 
-<style>
-.singerdiv {
-  border-bottom: 1px solid #d3d1d1;
-}
-.singerdiv p {
-  text-align: center;
-  line-height: 22vw;
-  font-size: 20px;
-}
+<style lang="scss">
+@import "@/style/home/singerList";
 </style>
