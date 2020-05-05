@@ -22,18 +22,27 @@
   }
   .box {
     width: 100%;
+    display: flex;
     position: fixed;
     top: 0;
-    height: 6%;
-    z-index: 5;
+    height: 13vw;
+    .mine{
+      margin-top: 4vw;
+    }
   }
   .box1 {
     width: 100%;
     position: fixed;
-    top: 6%;
+    top: 13vw;
     z-index: 5;
+    border-top: 1px solid #fff;
+    .van-tabs__line{
+      position: absolute;
+      top: 9vw;
+    }
   }
   .ysbox {
     height: 100%;
   }
 }
+

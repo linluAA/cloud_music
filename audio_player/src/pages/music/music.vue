@@ -23,7 +23,9 @@
     <!-- 主键 按钮控制 -->
     <div class="musicFoot">
       <div class="jindu">
-        <van-slider v-model="value" @change="onChange" /><span>{{this.long}}</span>
+        <span>{{this.uptime}}</span>
+        <van-slider v-model="value" @change="onChange" class="progressBar" />
+        <span>{{this.long}}</span>
       </div>
 
       <ul class="musicUl">
@@ -70,8 +72,11 @@ export default {
   data() {
     return {
       value: 0,
-      bool: false, //开关
+      bool: true, //开关
+      uptime: "",
       long: "",
+      second: "0",
+      minute: "0",
       songList: [], //歌曲地址
       songName: [], //歌曲名字和图片
       songArr: []
@@ -85,13 +90,12 @@ export default {
 
     // console.log(this.$route.query.arr)
     this.upSchedule();
-    this.bool = true;
   },
   methods: {
     // 自动更新进度
     upSchedule() {
       let audio = document.getElementById("audio");
-      let audioTime = audio.duration | 0;
+      let audioTime = audio.duration | 0; //获取回来的歌曲时长
       let theTime = parseInt(audioTime); // 秒
       let middle = 0; // 分
       if (theTime > 60) {
@@ -105,6 +109,15 @@ export default {
           let time = ((audio.currentTime / audio.duration) * 100) | 0;
           return (this.value = time);
         }
+      }, 1000);
+
+      setInterval(() => {
+        this.second++;
+        if (this.second > 60) {
+          this.minute++;
+          this.second = 0;
+        }
+        return (this.uptime = this.minute + ":" + this.second);
       }, 1000);
     },
 

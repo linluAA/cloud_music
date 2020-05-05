@@ -50,8 +50,24 @@
 }
 
 .bg .musicFoot .jindu {
-  margin-left: 20vw;
+  margin-left: 16vw;
   margin-bottom: 10vw;
+}
+
+.bg .musicFoot .jindu span:nth-child(1) {
+  position: absolute;
+  left: 7vw;
+  top: -2vw;
+}
+
+.bg .musicFoot .jindu span:nth-child(3) {
+  position: absolute;
+  right: -9vw;
+  top: -2vw;
+}
+
+.bg .musicFoot .jindu .progressBar {
+  float: left;
 }
 
 .bg .musicFoot .musicUl {

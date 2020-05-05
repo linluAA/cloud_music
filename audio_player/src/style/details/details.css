@@ -11,20 +11,26 @@
 }
 
 .details-top .top-btn {
-  position: absolute !important;
-  top: 4vw;
-  left: 3vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 8vw;
+}
+
+.details-top .top-btn .van-icon {
+  float: left;
 }
 
 .details-top .top-btn p {
-  float: right;
+  float: left;
   margin-left: 2vw;
-  font-size: 5.8vw;
+  font-size: 4.5vw;
   color: #fff;
 }
 
 .details-top .top-text {
-  position: absolute !important;
+  position: absolute;
   left: 3vw;
   top: 55vw;
 }
