@@ -4,6 +4,10 @@
   position: relative;
   text-align: left !important;
   line-height: 8vw !important;
-  color: #fff;
   background-color: #d44439;
+}
+
+.rankingbox {
+  height: 8%;
+  margin-top: 5vw;
 }

@@ -20,6 +20,7 @@
       </div>
     </div>
     <!-- 详情页下部分 -->
+
     <div class="details-bottom">
       <div class="btm-title">
         <van-icon name="play-circle-o" size="6vw" />
@@ -29,7 +30,7 @@
       <div class="btm-content">
         <div class="ranking" v-for="(item,idx) of dataInfo.hotSongs" :key="idx">
           <div class="ranking-left">{{idx+1}}</div>
-          <div class="ranking-right">
+          <div class="ranking-right" v-on:click="toMusic(idx)">
             <p class="right-name">{{item.name}}</p>
             <p>{{item.ar[0].name}}</p>
           </div>
@@ -68,7 +69,15 @@ export default {
       if (res.data.code === 200) {
         this.dataInfo = res.data;
         this.dataInfoTwo = res.data.artist;
+        console.log(this.dataInfo.hotSongs);
       }
+    },
+
+    toMusic: function(idx) {
+      this.$router.push({
+        path: "music",
+        query: { id: this.dataInfo.hotSongs[idx].id }
+      });
     }
   }
 };

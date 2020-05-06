@@ -1,6 +1,7 @@
 <template>
   <div>
     <!-- 排行榜 -->
+    <div class="rankingbox"></div>
     <ranking-box></ranking-box>
   </div>
 </template>
@@ -14,5 +15,6 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "@/style/ranking/ranking";
 </style>
